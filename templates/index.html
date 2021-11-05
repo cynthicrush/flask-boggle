@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+  <title>Boggle Game</title>
+</head>
+<body>
+  <section class='boggle'>
+    
+    <h1>Let's play Boggle!</h1>
+
+    <p>
+      Highest score:  <b>{{highest_score}}</b> in <b>{{play_times}}</b> plays
+    </p>
+    <p>
+      Score:  <b class="score">0</b>
+    </p>
+    <p>
+      Time Left(s):  <b class="timer"></b>
+    </p>
+
+    <table class="game-board">
+      <tbody>
+        {% for row in board %}
+        <tr>
+          {% for cell in row %}
+          <td>{{ cell }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <form class="new-word" method="POST">
+      <label>Your guess: 
+        <input type='text' name="word" class="word" placeholder="Take a guess here!">
+      </label>
+      <button class='submit-word'>Submit</button>
+    </form>
+
+    <p class="message">
+
+    </p>
+
+    <ul class="words-list">
+
+    </ul>
+  </section>  
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <script src="../static/boggle.js"></script>
+  <script>
+    const game = new Boggle()
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+* {
+  color: white;
+  text-align: center;
+  font-family: 'Mochiy Pop One', sans-serif;
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+body {
+  background-color: black;
+}
+
+.game-board {
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.game-board td {
+  text-align: center;
+  height: 60px;
+  width: 60px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+button {
+  border: 2px solid white;
+  background-color: black;
+}
+
+input {
+  border: 2px solid white;
+  background-color: black;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+b {
+  color: hotpink;
+  margin: 0 7px;
+}
+
